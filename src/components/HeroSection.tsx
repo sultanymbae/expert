@@ -42,7 +42,7 @@ export function HeroSection() {
     autoplaySpeed: 8000,
     fade: true,
     pauseOnHover: true,
-    arrows: true,
+    arrows: false,
     responsive: [
       {
         breakpoint: 768,

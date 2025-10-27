@@ -8,31 +8,31 @@ export function DoctorsSection() {
   const [isDoctorsModalOpen, setIsDoctorsModalOpen] = useState(false);
   const doctors = [
     {
-      name: "Иванов Сергей Петрович",
-      specialty: "Кардиолог",
+      name: "Булатова Анара Али-Акбаровна",
+      specialty: "Врач УЗИ, акушер-гинеколог",
       experience: "15 лет опыта",
-      education: "РГМУ им. Н.И. Пирогова",
-      achievements: ["Кандидат медицинских наук", "Врач высшей категории"],
+      education: "КГМА им. И.К. Ахунбаева",
+      achievements: ["Врач высшей категории", "Сертификат FMF"],
       rating: 4.9,
       reviews: 127,
-      image: "https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      image: ""
     },
     {
-      name: "Петрова Анна Михайловна",
-      specialty: "Невролог",
+      name: "Аширова Зильфира Каримовна",
+      specialty: "Врач УЗИ, акушер-гинеколог",
       experience: "12 лет опыта",
-      education: "МГУ им. М.В. Ломоносова",
-      achievements: ["Врач высшей категории", "Эксперт по мигрени"],
+      education: "КНМУ им. С.Д. Асфендиярова",
+      achievements: ["Врач высшей категории", "Сертификат FMF"],
       rating: 4.8,
       reviews: 89,
       image: "https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
     {
-      name: "Сидоров Алексей Владимирович",
-      specialty: "Офтальмолог",
+      name: "Давлеталиева Зульфия Анварбековна",
+      specialty: "Врач акушер-гинеколог",
       experience: "10 лет опыта",
-      education: "МГМСУ им. А.И. Евдокимова",
-      achievements: ["Специалист по лазерной хирургии", "Врач первой категории"],
+      education: "КГМА им. И.К. Ахунбаева",
+      achievements: [],
       rating: 4.9,
       reviews: 156,
       image: "https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"

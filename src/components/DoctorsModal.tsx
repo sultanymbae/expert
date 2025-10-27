@@ -1,11 +1,13 @@
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
 import { Card, CardContent } from "./ui/card";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
-import { Star } from "lucide-react";
+import { Star, Clock, Award } from "lucide-react";
 
 interface Doctor {
   name: string;
   specialty: string;
+  experience: string;
+  education: string;
   achievements: string[];
   rating: number;
   image: string;
@@ -19,65 +21,119 @@ interface DoctorsModalProps {
 export function DoctorsModal({ isOpen, onClose }: DoctorsModalProps) {
   const allDoctors: Doctor[] = [
     {
-      name: "Иванов Сергей Петрович",
-      specialty: "Кардиолог",
-      achievements: ["Кандидат медицинских наук", "Врач высшей категории"],
+      name: "Булатова Анара Али-Акбаровна",
+      specialty: "Врач УЗИ, акушер-гинеколог",
+      experience: "15 лет опыта",
+      education: "РГМУ им. Н.И. Пирогова",
+      achievements: ["Врач высшей категории"],
       rating: 4.9,
       image: "https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
     {
-      name: "Петрова Анна Михайловна",
-      specialty: "Невролог",
-      achievements: ["Врач высшей категории", "Эксперт по мигрени"],
+      name: "Аширова Зильфира Каримовна",
+      specialty: "Врач УЗИ",
+      experience: "15 лет опыта",
+      education: "РГМУ им. Н.И. Пирогова",
+      achievements: ["Врач высшей категории"],
       rating: 4.8,
       image: "https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
     {
-      name: "Сидоров Алексей Владимирович",
-      specialty: "Офтальмолог",
-      achievements: ["Кандидат медицинских наук", "Врач первой категории"],
+      name: "Волкова Татьяна Алексеевна",
+      specialty: "Врач УЗИ",
+      experience: "15 лет опыта",
+      education: "РГМУ им. Н.И. Пирогова",
+      achievements: ["Врач высшей категории"],
       rating: 4.9,
       image: "https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
     {
-      name: "Смирнова Елена Игоревна",
-      specialty: "Эндокринолог",
-      achievements: ["Врач первой категории", "Специалист по диабету"],
+      name: "Мааткеримов Талант Талыпович",
+      specialty: "Врач УЗИ",
+      experience: "15 лет опыта",
+      education: "РГМУ им. Н.И. Пирогова",
+      achievements: [""],
       rating: 4.7,
       image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
     {
-      name: "Козлов Дмитрий Александрович",
-      specialty: "Хирург",
-      achievements: ["Кандидат медицинских наук", "Врач высшей категории"],
+      name: "Турумбекова Гулира Турумбековна",
+      specialty: "Врач УЗИ",
+      experience: "15 лет опыта",
+      education: "РГМУ им. Н.И. Пирогова",
+      achievements: [""],
       rating: 4.9,
       image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBtYWxlJTIwc3VyZ2VvbnxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
     {
-      name: "Волкова Мария Сергеевна",
-      specialty: "Дерматолог",
-      achievements: ["Врач первой категории", "Специалист по косметологии"],
+      name: "Алмазбекова Аида Алмазбековна",
+      specialty: "Врач УЗИ",
+      experience: "15 лет опыта",
+      education: "РГМУ им. Н.И. Пирогова",
+      achievements: [""],
       rating: 4.8,
       image: "https://images.unsplash.com/photo-1594824111080-e09ac7668cd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBkZXJtYXRvbG9naXN0fGVufDF8fHx8MTc1ODQ1NTMzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
     {
-      name: "Орлова Виктория Андреевна",
-      specialty: "Гинеколог",
-      achievements: ["Кандидат медицинских наук", "Врач высшей категории"],
+      name: "Мамешева Наталья Владимировна",
+      specialty: "Врач УЗИ",
+      experience: "15 лет опыта",
+      education: "РГМУ им. Н.И. Пирогова",
+      achievements: ["Врач высшей категории"],
       rating: 4.9,
       image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
     {
-      name: "Морозов Андрей Викторович",
-      specialty: "Уролог",
-      achievements: ["Врач высшей категории", "Специалист по урологии"],
+      name: "Мусаева Айжан Абдулдаевна",
+      specialty: "Врач УЗИ",
+      experience: "15 лет опыта",
+      education: "РГМУ им. Н.И. Пирогова",
+      achievements: [""],
       rating: 4.8,
       image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBtYWxlJTIwc3VyZ2VvbnxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     },
     {
-      name: "Зайцева Ольга Николаевна",
-      specialty: "Педиатр",
-      achievements: ["Кандидат медицинских наук", "Врач высшей категории"],
+      name: "Бегалиев Азамат Молдокадырович",
+      specialty: "Врач УЗИ",
+      experience: "15 лет опыта",
+      education: "РГМУ им. Н.И. Пирогова",
+      achievements: [""],
+      rating: 4.9,
+      image: "https://images.unsplash.com/photo-1594824111080-e09ac7668cd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBkZXJtYXRvbG9naXN0fGVufDF8fHx8MTc1ODQ1NTMzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    },
+    {
+      name: "Дубовскова Светлана Константиновна",
+      specialty: "Врач УЗИ",
+      experience: "15 лет опыта",
+      education: "РГМУ им. Н.И. Пирогова",
+      achievements: [""],
+      rating: 4.9,
+      image: "https://images.unsplash.com/photo-1594824111080-e09ac7668cd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBkZXJtYXRvbG9naXN0fGVufDF8fHx8MTc1ODQ1NTMzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    },
+    {
+      name: "Курманалиева Мээрим Алмазбековна",
+      specialty: "Врач-генетик",
+      experience: "15 лет опыта",
+      education: "РГМУ им. Н.И. Пирогова",
+      achievements: [""],
+      rating: 4.9,
+      image: "https://images.unsplash.com/photo-1594824111080-e09ac7668cd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBkZXJtYXRvbG9naXN0fGVufDF8fHx8MTc1ODQ1NTMzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    },
+    {
+      name: "Довлотова Гульзар Сейитбековна",
+      specialty: "Врач-генетик",
+      experience: "15 лет опыта",
+      education: "РГМУ им. Н.И. Пирогова",
+      achievements: [""],
+      rating: 4.9,
+      image: "https://images.unsplash.com/photo-1594824111080-e09ac7668cd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBkZXJtYXRvbG9naXN0fGVufDF8fHx8MTc1ODQ1NTMzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+    },
+    {
+      name: "Волкова Татьяна Алексеевна",
+      specialty: "Врач УЗИ",
+      experience: "15 лет опыта",
+      education: "РГМУ им. Н.И. Пирогова",
+      achievements: [""],
       rating: 4.9,
       image: "https://images.unsplash.com/photo-1594824111080-e09ac7668cd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBkZXJtYXRvbG9naXN0fGVufDF8fHx8MTc1ODQ1NTMzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
     }
