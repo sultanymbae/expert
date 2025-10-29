@@ -17,11 +17,91 @@ export function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
       icon: Monitor,
       color: "text-blue-600",
       services: [
-        { name: "УЗИ органов брюшной полости", price: "3,500", duration: "30 мин" },
-        { name: "УЗИ сердца (ЭхоКГ)", price: "4,500", duration: "30 мин" },
-        { name: "УЗИ малого таза", price: "3,200", duration: "25 мин" },
-        { name: "УЗИ щитовидной железы", price: "2,800", duration: "20 мин" },
-        { name: "Допплерография сосудов", price: "4,200", duration: "35 мин" },
+        { name: "УЗИ 2D свыше 2 недель", price: "1,500", duration: "~30 мин" },
+        { name: "УЗИ 3D свыше 12 недель", price: "2,000", duration: "~30 мин" },
+        { name: "УЗИ доплер 4D", price: "2,500", duration: "~30 мин" },
+        { name: "УЗИ 3D/4D", price: "2,500", duration: "~30 мин" },
+        { name: "УЗИ доплер 3D", price: "2,000", duration: "~30 мин" },
+        { name: "УЗИ гинекология", price: "1,000", duration: "~30 мин" },
+        { name: "УЗИ 1й скрининг 4D", price: "2,500", duration: "~30 мин" },
+        { name: "УЗИ 2й скрининг 4D", price: "2,500", duration: "~30 мин" },
+        { name: "УЗИ 1й скрининг 3D", price: "2,000", duration: "~30 мин" },
+        { name: "УЗИ 2й скрининг 3D", price: "2,000", duration: "~30 мин" },
+        { name: "УЗИ доплер 2D", price: "1,500", duration: "~30 мин" },
+        { name: "УЗИ до 12 недель", price: "1,000", duration: "~30 мин" },
+        { name: "УЗИ селезенки", price: "500", duration: "~30 мин" },
+        { name: "УЗИ почек", price: "800", duration: "~30 мин" },
+        { name: "УЗИ щитовидной железы", price: "800", duration: "~30 мин" },
+        { name: "УЗИ молочных желез", price: "1,000", duration: "~30 мин" },
+        { name: "УЗИ лимфоузлов", price: "300", duration: "~30 мин" },
+        { name: "УЗИ мочевого пузыря", price: "300", duration: "~30 мин" },
+        { name: "УЗИ брюшной полости", price: "2,500", duration: "~30 мин" },
+        { name: "УЗИ брюшной полости (дети)", price: "1,800", duration: "~30 мин" },
+        { name: "УЗИ мягких тканей", price: "400", duration: "~30 мин" },
+        { name: "УЗИ яичек", price: "700", duration: "~30 мин" },
+        { name: "УЗИ двойня 2D", price: "2,000", duration: "~30 мин" },
+        { name: "УЗИ двойня 3D", price: "3,500", duration: "~30 мин" },
+        { name: "УЗИ мошонки", price: "1,000", duration: "~30 мин" },
+        { name: "Фолликулометрия", price: "500", duration: "~30 мин" },
+        { name: "УЗИ простаты", price: "500", duration: "~30 мин" },
+        { name: "УЗИ поджелудочной", price: "500", duration: "~30 мин" },
+        { name: "Лонное Сочление", price: "500", duration: "~30 мин" },
+        { name: "УЗИ гинекология(Virgo)", price: "800", duration: "~30 мин" },
+        { name: "УЗИ печени и желчного пузыря", price: "800", duration: "~30 мин" },
+        { name: "УЗИ доплер 3D двойня", price: "3,500", duration: "~30 мин" },
+        { name: "УЗИ головного мозга", price: "700", duration: "~30 мин" },
+        { name: "УЗИ сосудов шеи", price: "1,000", duration: "~30 мин" },
+        { name: "УЗИ сосудов верхних конечностей", price: "800", duration: "~30 мин" },
+        { name: "УЗИ сосудов нижних конечностей", price: "1,000", duration: "~30 мин" },
+        { name: "УЗИ сосудов почек", price: "1,100", duration: "~30 мин" },
+        { name: "Транскраниальное дуплексное сканирование сосудов шеи и головного мозга", price: "1,500", duration: "~30 мин" },
+        { name: "УЗИ брюшной аорты и нижней полой вены", price: "900", duration: "~30 мин" },
+        { name: "ЭхоКГ", price: "1,200", duration: "~30 мин" },
+        { name: "ЭКГ", price: "400", duration: "~30 мин" },
+        { name: "УЗИ 1й скрининг 2D", price: "1,500", duration: "~30 мин" },
+        { name: "УЗИ 2й скрининг 2D", price: "1,500", duration: "~30 мин" },
+        { name: "Справка", price: "200", duration: "~30 мин" },
+        { name: "УЗИ доплер 2D двойня", price: "2,000", duration: "~30 мин" },
+        { name: "УЗИ 3й скрининг 4D", price: "2,500", duration: "~30 мин" },
+        { name: "УЗИ беременности 2D свыше 12 недель", price: "1,500", duration: "~30 мин" },
+        { name: "УЗИ плода", price: "2,000", duration: "~30 мин" },
+        { name: "УЗИ плода свыше 12 недель", price: "1,500", duration: "~30 мин" },
+        { name: "УЗИ Тазобедренных суставов", price: "500", duration: "~30 мин" },
+        { name: "Тимус", price: "500", duration: "~30 мин" },
+        { name: "УЗИ 1й скрининг", price: "2,500", duration: "~30 мин" },
+        { name: "УЗИ 2й скрининг", price: "2,500", duration: "~30 мин" },
+        { name: "УЗИ 3й скрининг", price: "2,500", duration: "~30 мин" },
+        { name: "УЗИ доплер", price: "2,000", duration: "~30 мин" },
+        { name: "УЗИ двойня", price: "3,500", duration: "~30 мин" },
+        { name: "УЗИ двойня 4D", price: "3,500", duration: "~30 мин" },
+        { name: "УЗИ почек с определением функции", price: "800", duration: "~30 мин" },
+        { name: "УЗИ печени и желчного пузыря с опр. функции", price: "1,000", duration: "~30 мин" },
+        { name: "УЗИ легких", price: "1,100", duration: "~30 мин" },
+        { name: "УЗИ превральных полостей", price: "400", duration: "~30 мин" },
+        { name: "Биопсия щитовидной железы", price: "2,500", duration: "~30 мин" },
+        { name: "УЗИ доплер сосудов шеи", price: "1,000", duration: "~30 мин" },
+        { name: "УЗИ доплер сосудов головного мозга", price: "1,100", duration: "~30 мин" },
+        { name: "УЗИ доплер сосудов верхних конечностей", price: "1,200", duration: "~30 мин" },
+        { name: "УЗИ доплер сосудов нижних конечностей", price: "1,200", duration: "~30 мин" },
+        { name: "УЗИ доплер сосудов печени", price: "800", duration: "~30 мин" },
+        { name: "УЗИ доплер сосудов почек", price: "900", duration: "~30 мин" },
+        { name: "УЗИ доплер брюшного отдела аорты и ее мезентериальных ветвей", price: "1,000", duration: "~30 мин" },
+        { name: "УЗИ печени и желчного пузыря с определением сократительной функции", price: "850", duration: "~30 мин" },
+        { name: "УЗИ почек и мочеточников", price: "550", duration: "~30 мин" },
+        { name: "УЗИ поджелудочной железы", price: "450", duration: "~30 мин" },
+        { name: "УЗИ мочевого пузыря с определением остаточной мочи", price: "500", duration: "~30 мин" },
+        { name: "УЗИ надпочечников", price: "500", duration: "~30 мин" },
+        { name: "УЗИ щитовидной железы и регионарных лимфатических узлов", price: "600", duration: "~30 мин" },
+        { name: "УЗИ паращитовидных желез и регионарных лимфатических узлов", price: "600", duration: "~30 мин" },
+        { name: "УЗИ молочных желез и регионарных лимфатических узлов", price: "600", duration: "~30 мин" },
+        { name: "УЗИ органов мошонки с доплерометрией сосудов", price: "900", duration: "~30 мин" },
+        { name: "УЗИ представительной железы", price: "850", duration: "~30 мин" },
+        { name: "УЗИ лимфатических узлов", price: "400", duration: "~30 мин" },
+        { name: "УЗИ коленных суставов", price: "1,200", duration: "~30 мин" },
+        { name: "УЗИ слюнных желез и регионарных лимфатических узлов", price: "500", duration: "~30 мин" },
+        { name: "УЗИ 3й скриннинг 2D", price: "1,500", duration: "~30 мин" },
+        { name: "УЗИ 3й скриннинг 3D", price: "2,500", duration: "~30 мин" },
+        { name: "Лонное сочление", price: "500", duration: "~30 мин" },
       ]
     },
     {
@@ -30,11 +110,25 @@ export function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
       icon: Users,
       color: "text-pink-600",
       services: [
-        { name: "Консультация гинеколога", price: "3,200", duration: "45 мин" },
-        { name: "УЗИ малого таза гинекологическое", price: "3,500", duration: "25 мин" },
-        { name: "Кольпоскопия", price: "4,800", duration: "30 мин" },
-        { name: "Цитологическое исследование", price: "2,500", duration: "15 мин" },
-        { name: "Лечение эрозии шейки матки", price: "от 8,000", duration: "45 мин" },
+        { name: "Консультация", price: "1,200", duration: "~30 мин" },
+        { name: "Детская гинекология", price: "800", duration: "~30 мин" },
+        { name: "Постановка на учёт", price: "6,000", duration: "~30 мин" },
+        { name: "Введение ВМС (Мирена)", price: "1,500 - 2000", duration: "~30 мин" },
+        { name: "Удаление ВМС", price: "1,000", duration: "~30 мин" },
+        { name: "МВА", price: "6,000", duration: "~30 мин" },
+        { name: "Прижигание", price: "6,500", duration: "~30 мин" },
+        { name: "Удаление ЕД кандилом", price: "1,000", duration: "~30 мин" },
+        { name: "Удаление МН кандилом", price: "2,500", duration: "~30 мин" },
+        { name: "Кольпоскопия", price: "1,200", duration: "~30 мин" },
+        { name: "Биопсия шейки матки", price: "1,000", duration: "~30 мин" },
+        { name: "Гименопластика", price: "6,000", duration: "~30 мин" },
+        { name: "Фарм аборт", price: "6,000", duration: "~30 мин" },
+        { name: "Хирургическая коагуляция шейки матки", price: "3,000", duration: "~30 мин" },
+        { name: "Швы", price: "2,000", duration: "~30 мин" },
+        { name: "Санация", price: "300", duration: "~30 мин" },
+        { name: "Разъединение синехии половых губ", price: "2,000", duration: "~30 мин" },
+        { name: "Справка", price: "200", duration: "~30 мин" },
+        { name: "Повторный приём", price: "1,200", duration: "~30 мин" },
       ]
     },
     {
@@ -43,11 +137,9 @@ export function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
       icon: Dna,
       color: "text-purple-600",
       services: [
-        { name: "Консультация врача-генетика", price: "5,500", duration: "60 мин" },
-        { name: "Молекулярно-генетический анализ", price: "от 12,000", duration: "7-14 дней" },
-        { name: "Пренатальная генетическая диагностика", price: "от 18,000", duration: "10-14 дней" },
-        { name: "Кариотипирование", price: "8,500", duration: "14-21 день" },
-        { name: "Генетический скрининг новорожденных", price: "6,800", duration: "5-7 дней" },
+        { name: "Первичный приём", price: "2,000", duration: "~30 мин" },
+        { name: "Повторный приём", price: "1,000", duration: "~30 мин" },
+        { name: "Справка", price: "300", duration: "~30 мин" },
       ]
     },
     {
@@ -56,11 +148,9 @@ export function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
       icon: Activity,
       color: "text-green-600",
       services: [
-        { name: "КТГ плода стандартное", price: "2,800", duration: "30 мин" },
-        { name: "КТГ с нагрузочными тестами", price: "3,500", duration: "45 мин" },
-        { name: "Антенатальное КТГ", price: "3,200", duration: "40 мин" },
-        { name: "КТГ при многоплодной беременности", price: "4,200", duration: "50 мин" },
-        { name: "Экстренное КТГ", price: "3,800", duration: "30 мин" },
+        { name: "КТГ", price: "1,200", duration: "~30 мин" },
+        { name: "КТГ двойня", price: "1,800", duration: "~30 мин" },
+        { name: "Справка", price: "200", duration: "~30 мин" },
       ]
     },
     {
@@ -69,11 +159,11 @@ export function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
       icon: Heart,
       color: "text-red-600",
       services: [
-        { name: "Консультация кардиолога", price: "3,500", duration: "45 мин" },
-        { name: "ЭКГ", price: "1,200", duration: "15 мин" },
-        { name: "ЭхоКГ (УЗИ сердца)", price: "4,500", duration: "30 мин" },
-        { name: "Холтеровское мониторирование", price: "6,000", duration: "24 часа" },
-        { name: "Нагрузочные тесты", price: "8,500", duration: "60 мин" },
+        { name: "ЭХОКГ", price: "1,000", duration: "~30 мин" },
+        { name: "ЭКГ", price: "250", duration: "~30 мин" },
+        { name: "Первичная консультация", price: "600", duration: "~30 мин" },
+        { name: "Повторная консультация", price: "500", duration: "~30 мин" },
+        { name: "Справка", price: "200", duration: "~30 мин" },
       ]
     },
     {
@@ -82,11 +172,19 @@ export function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
       icon: Ear,
       color: "text-orange-600",
       services: [
-        { name: "Консультация ЛОР-врача", price: "3,000", duration: "30 мин" },
-        { name: "Эндоскопия ЛОР-органов", price: "4,500", duration: "25 мин" },
-        { name: "Аудиометрия", price: "2,800", duration: "20 мин" },
-        { name: "Лечение синуситов", price: "от 5,500", duration: "45 мин" },
-        { name: "Удаление серных пробок", price: "1,800", duration: "15 мин" },
+        { name: "Первичный приём", price: "600", duration: "~30 мин" },
+        { name: "Повторный приём", price: "500", duration: "~30 мин" },
+        { name: "Справка", price: "200", duration: "~30 мин" },
+        { name: "Промывание", price: "500", duration: "~30 мин" },
+        { name: "Пункция, вскрытие", price: "100", duration: "~30 мин" },
+        { name: "Удаление инородных тел", price: "600", duration: "~30 мин" },
+        { name: "Куф", price: "200", duration: "~30 мин" },
+        { name: "Промывание лакун, миндалин", price: "700", duration: "~30 мин" },
+        { name: "Продувание евстах.труб", price: "300", duration: "~30 мин" },
+        { name: "Катетеризация евстах.труб", price: "500", duration: "~30 мин" },
+        { name: "Ямик катетер", price: "2,000", duration: "~30 мин" },
+        { name: "Анемизация носовых ходов", price: "200", duration: "~30 мин" },
+        { name: "Тонзилор", price: "1,200", duration: "~30 мин" },
       ]
     },
     {
@@ -95,11 +193,10 @@ export function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
       icon: UserX,
       color: "text-teal-600",
       services: [
-        { name: "Консультация маммолога", price: "3,200", duration: "40 мин" },
-        { name: "УЗИ молочных желез", price: "3,500", duration: "25 мин" },
-        { name: "Маммография", price: "4,800", duration: "15 мин" },
-        { name: "Биопсия молочной железы", price: "12,000", duration: "30 мин" },
-        { name: "Контрольное УЗИ после лечения", price: "3,200", duration: "20 мин" },
+        { name: "Первичный приём", price: "800", duration: "~30 мин" },
+        { name: "Вторичный приём", price: "700", duration: "~30 мин" },
+        { name: "Справка", price: "200", duration: "~30 мин" },
+        { name: "УЗИ молочных желез", price: "1,000", duration: "~30 мин" },
       ]
     },
     {
@@ -108,11 +205,12 @@ export function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
       icon: Users,
       color: "text-indigo-600",
       services: [
-        { name: "Консультация уролога", price: "3,500", duration: "45 мин" },
-        { name: "УЗИ мочеполовой системы", price: "3,800", duration: "30 мин" },
-        { name: "Андрологическое обследование", price: "4,500", duration: "50 мин" },
-        { name: "Лечение простатита", price: "от 8,000", duration: "60 мин" },
-        { name: "Спермограмма", price: "2,800", duration: "5 мин" },
+        { name: "Первичная консультация", price: "1,000", duration: "~30 мин" },
+        { name: "Повторная консультация", price: "600", duration: "~30 мин" },
+        { name: "Массаж простаты", price: "550", duration: "~30 мин" },
+        { name: "Удаление папиллом", price: "1,000", duration: "~30 мин" },
+        { name: "Курс физиолечения 15 дн + массаж простаты", price: "10,100", duration: "~15 дней" },
+        { name: "Справка", price: "200", duration: "~30 мин" },
       ]
     },
     {
@@ -121,11 +219,27 @@ export function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
       icon: Zap,
       color: "text-yellow-600",
       services: [
-        { name: "Консультация эндокринолога", price: "3,500", duration: "45 мин" },
-        { name: "УЗИ щитовидной железы", price: "2,800", duration: "20 мин" },
-        { name: "Гормональные исследования (комплекс)", price: "8,500", duration: "1 день" },
-        { name: "Лечение сахарного диабета", price: "от 4,500", duration: "60 мин" },
-        { name: "Подбор инсулинотерапии", price: "5,200", duration: "50 мин" },
+        { name: "Первичный приём", price: "1,200", duration: "~30 мин" },
+        { name: "Повторный приём", price: "1,000", duration: "~30 мин" },
+        { name: "Кольпоскопия", price: "1,200", duration: "~30 мин" },
+        { name: "Детская гинекология", price: "800", duration: "~30 мин" },
+        { name: "Гименопластика", price: "6,000", duration: "~30 мин" },
+        { name: "Консультация Д.М.Н.", price: "300", duration: "~30 мин" },
+        { name: "Повторный приём ХХХ", price: "1,000", duration: "~30 мин" },
+        { name: "Швы", price: "2,000", duration: "~30 мин" },
+        { name: "Санация", price: "300", duration: "~30 мин" },
+        { name: "Фарм. аборт", price: "6,000", duration: "~30 мин" },
+        { name: "Взятие биопсии", price: "1,000", duration: "~30 мин" },
+        { name: "МВА (Мануальная вакуумная аспирация)", price: "6,000", duration: "~30 мин" },
+        { name: "Удаление ед.кандилом", price: "1,000", duration: "~30 мин" },
+        { name: "Удаление мн.кандилом", price: "2,500", duration: "~30 мин" },
+        { name: "Хирургическая коагуляция шейки матки", price: "3,000", duration: "~30 мин" },
+        { name: "Инсеминация", price: "24,000", duration: "~30 мин" },
+        { name: "Справка", price: "200", duration: "~30 мин" },
+        { name: "Разъединение синехии малых половых губ", price: "2,000", duration: "~30 мин" },
+        { name: "Введение Мирена", price: "1,500", duration: "~30 мин" },
+        { name: "Декретный лист", price: "500", duration: "~30 мин" },
+        { name: "Аспират из полости матки", price: "1,500", duration: "~30 мин" },
       ]
     },
     {
@@ -134,16 +248,25 @@ export function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
       icon: TestTube,
       color: "text-cyan-600",
       services: [
-        { name: "Биохимический анализ", price: "2,500", duration: "15 мин" },
+        { name: "Биохимический анализ", price: "2,600", duration: "15 мин" },
+        { name: "НИПТ (Не инвазивный пренатальный тест)", price: "от 17,000", duration: "~30 мин"},
+        { name: "Анализы RW, ВИЧ", price: "500", duration: "~30 мин" },
+        { name: "Анализ на ВГВ, ВГС (HbsAg)", price: "500", duration: "~30 мин" },
+        { name: "В/в капельница", price: "200", duration: "~30 мин" },
+        { name: "В/в стр.", price: "100", duration: "~30 мин" },
+        { name: "В/м инъекция", price: "50", duration: "~30 мин" },
+        { name: "Анализ RW", price: "250", duration: "~30 мин" },
+        { name: "Справка", price: "200", duration: "~30 мин" },
+        { name: "ЭКГ", price: "600", duration: "~30 мин" },
       ]
     }
   ];
 
   const popularServices = [
-    { name: "УЗИ органов брюшной полости", price: "3,500", category: "УЗИ" },
-    { name: "Консультация кардиолога + ЭКГ", price: "4,700", category: "КАРДИОЛОГ" },
-    { name: "Гинекологическое обследование", price: "6,700", category: "ГИНЕКОЛОГИЯ" },
-    { name: "КТГ плода с нагрузочными тестами", price: "3,500", category: "КТГ" },
+    { name: "УЗИ 2D свыше 2 недель", price: "1,500", category: "УЗИ" },
+    { name: "УЗИ 3D/4D", price: "2,500", category: "УЗИ" },
+    { name: "КТГ", price: "1,200", category: "КТГ" },
+    { name: "КТГ двойня", price: "1,800", category: "КТГ" },
   ];
 
   return (
@@ -159,7 +282,7 @@ export function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
                   <div className="font-medium">{service.name}</div>
                   <Badge variant="secondary" className="text-xs mt-1">{service.category}</Badge>
                 </div>
-                <div className="font-semibold text-primary">{service.price} ₽</div>
+                <div className="font-semibold text-primary">{service.price} c</div>
               </div>
             ))}
           </div>
@@ -198,7 +321,7 @@ export function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
                             <div className="font-medium">{service.name}</div>
                             <div className="text-sm text-muted-foreground">{service.duration}</div>
                           </div>
-                          <div className="font-semibold text-primary ml-4">{service.price} ₽</div>
+                          <div className="font-semibold text-primary ml-4">{service.price} c</div>
                         </div>
                       ))}
                     </div>
