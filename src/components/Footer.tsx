@@ -28,7 +28,7 @@ export function Footer() {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-4 flex flex-col items-center md:items-start text-center md:text-left">
+          <div className="space-y-3 flex flex-col items-center md:items-start text-center md:text-left">
             <h4 className="font-semibold text-lg">Контакты</h4>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
@@ -46,9 +46,9 @@ export function Footer() {
             </div>
 
             {/* Social Media */}
-            <div className="space-y-3 pt-2">
+            <div className="space-y-3 flex flex-col items-center md:items-start">
               <h5 className="font-semibold">Мы в соцсетях</h5>
-              <div className="flex space-x-3">
+              <div className="flex items-center space-x-3">
                 <a href="https://www.facebook.com/expertclinica" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   <Facebook className="w-5 h-5" />
                 </a>

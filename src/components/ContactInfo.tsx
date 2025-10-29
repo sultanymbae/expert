@@ -52,7 +52,7 @@ export function ContactInfo() {
               <h3 className="font-semibold mb-2">Адрес</h3>
               <div className="space-y-1">
                 <div className="font-semibold">Койбагарова, 95</div>
-                <div className="text-sm text-muted-foreground">Кыргызстан</div>
+                <div className="text-sm text-muted-foreground">г. Бишкек</div>
               </div>
             </CardContent>
           </Card>

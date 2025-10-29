@@ -86,7 +86,7 @@ export function HeroSection() {
                   <Award className="w-6 h-6 text-primary" />
                 </div>
                 <div>
-                  <p className="font-semibold">50+ врачей</p>
+                  <p className="font-semibold">40+ врачей</p>
                   <p className="text-sm text-muted-foreground">экспертов</p>
                 </div>
               </div>

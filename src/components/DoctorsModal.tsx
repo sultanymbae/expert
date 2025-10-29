@@ -2,6 +2,20 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle } from "./ui/dialog";
 import { Card, CardContent } from "./ui/card";
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { Star, Clock, Award } from "lucide-react";
+//doctor images
+import BulatovaImg from "../assets/Bulatova.png";
+import AshirovaImg from "../assets/Ashirova.png";
+import DavletalievaImg from "../assets/Davletalieva.png"
+import MaatkerimovImg from "../assets/Maatkerimov.png"
+import TurumbekovaImg from "../assets/Turumbekova.png"
+import AlmazbekovaImg from "../assets/Almazbekova.png"
+import KurmanalievaImg from "../assets/Kurmanalieva.png"
+import VolkovaImg from "../assets/Volkova.png"
+import DubovskovaImg from "../assets/Dubovskova.png"
+import PodtesovaImg from "../assets/Podtesova.png"
+import NarmatovaImg from "../assets/Narmatova.png"
+import KimImg from "../assets/Kim.png"
+import VasilevskayaImg from "../assets/Vasilevskaya.png"
 
 interface Doctor {
   name: string;
@@ -9,7 +23,6 @@ interface Doctor {
   experience: string;
   education: string;
   achievements: string[];
-  rating: number;
   image: string;
 }
 
@@ -23,120 +36,123 @@ export function DoctorsModal({ isOpen, onClose }: DoctorsModalProps) {
     {
       name: "Булатова Анара Али-Акбаровна",
       specialty: "Врач УЗИ, акушер-гинеколог",
-      experience: "15 лет опыта",
-      education: "РГМУ им. Н.И. Пирогова",
-      achievements: ["Врач высшей категории"],
-      rating: 4.9,
-      image: "https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      experience: "36 лет опыта",
+      education: "КГМА им. И.К. Ахунбаева",
+      achievements: ["Врач высшей категории", "Сертификат FMF"],
+      image: BulatovaImg
     },
     {
       name: "Аширова Зильфира Каримовна",
-      specialty: "Врач УЗИ",
-      experience: "15 лет опыта",
-      education: "РГМУ им. Н.И. Пирогова",
-      achievements: ["Врач высшей категории"],
-      rating: 4.8,
-      image: "https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      specialty: "Врач УЗИ, акушер-гинеколог",
+      experience: "26 лет опыта",
+      education: "КНМУ им. С.Д. Асфендиярова",
+      achievements: ["Врач высшей категории", "Сертификат FMF"],
+      image: AshirovaImg
     },
     {
-      name: "Волкова Татьяна Алексеевна",
-      specialty: "Врач УЗИ",
-      experience: "15 лет опыта",
-      education: "РГМУ им. Н.И. Пирогова",
-      achievements: ["Врач высшей категории"],
-      rating: 4.9,
-      image: "https://images.unsplash.com/photo-1615177393114-bd2917a4f74a?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBwb3J0cmFpdCUyMHByb2Zlc3Npb25hbHxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      name: "Давлеталиева Зульфия Анварбековна",
+      specialty: "Врач акушер-гинеколог",
+      experience: "30 лет опыта",
+      education: "КГМА им. И.К. Ахунбаева",
+      achievements: [],
+      image: DavletalievaImg
     },
     {
       name: "Мааткеримов Талант Талыпович",
       specialty: "Врач УЗИ",
-      experience: "15 лет опыта",
-      education: "РГМУ им. Н.И. Пирогова",
-      achievements: [""],
-      rating: 4.7,
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      experience: "35 лет опыта",
+      education: "КГМА им. И.К. Ахунбаева",
+      achievements: [],
+      image: MaatkerimovImg
     },
     {
       name: "Турумбекова Гулира Турумбековна",
-      specialty: "Врач УЗИ",
-      experience: "15 лет опыта",
-      education: "РГМУ им. Н.И. Пирогова",
-      achievements: [""],
-      rating: 4.9,
-      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBtYWxlJTIwc3VyZ2VvbnxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      specialty: "Врач УЗИ, акушер-гинеколог",
+      experience: "11 лет опыта",
+      education: "КГМА им. И.К. Ахунбаева",
+      achievements: ["Сертификат FMF"],
+      image: TurumbekovaImg
     },
     {
       name: "Алмазбекова Аида Алмазбековна",
-      specialty: "Врач УЗИ",
-      experience: "15 лет опыта",
-      education: "РГМУ им. Н.И. Пирогова",
-      achievements: [""],
-      rating: 4.8,
-      image: "https://images.unsplash.com/photo-1594824111080-e09ac7668cd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBkZXJtYXRvbG9naXN0fGVufDF8fHx8MTc1ODQ1NTMzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      name: "Мамешева Наталья Владимировна",
-      specialty: "Врач УЗИ",
-      experience: "15 лет опыта",
-      education: "РГМУ им. Н.И. Пирогова",
-      achievements: ["Врач высшей категории"],
-      rating: 4.9,
-      image: "https://images.unsplash.com/photo-1559839734-2b71ea197ec2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBwb3J0cmFpdHxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      name: "Мусаева Айжан Абдулдаевна",
-      specialty: "Врач УЗИ",
-      experience: "15 лет опыта",
-      education: "РГМУ им. Н.И. Пирогова",
-      achievements: [""],
-      rating: 4.8,
-      image: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBtYWxlJTIwc3VyZ2VvbnxlbnwxfHx8fDE3NTg0NTUzMzR8MA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      name: "Бегалиев Азамат Молдокадырович",
-      specialty: "Врач УЗИ",
-      experience: "15 лет опыта",
-      education: "РГМУ им. Н.И. Пирогова",
-      achievements: [""],
-      rating: 4.9,
-      image: "https://images.unsplash.com/photo-1594824111080-e09ac7668cd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBkZXJtYXRvbG9naXN0fGVufDF8fHx8MTc1ODQ1NTMzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      name: "Дубовскова Светлана Константиновна",
-      specialty: "Врач УЗИ",
-      experience: "15 лет опыта",
-      education: "РГМУ им. Н.И. Пирогова",
-      achievements: [""],
-      rating: 4.9,
-      image: "https://images.unsplash.com/photo-1594824111080-e09ac7668cd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBkZXJtYXRvbG9naXN0fGVufDF8fHx8MTc1ODQ1NTMzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      specialty: "Врач УЗИ, акушер-гинеколог",
+      experience: "5 лет опыта",
+      education: "КГМА им. И.К. Ахунбаева",
+      achievements: ["Сертификат FMF"],
+      image: AlmazbekovaImg
     },
     {
       name: "Курманалиева Мээрим Алмазбековна",
       specialty: "Врач-генетик",
-      experience: "15 лет опыта",
-      education: "РГМУ им. Н.И. Пирогова",
-      achievements: [""],
-      rating: 4.9,
-      image: "https://images.unsplash.com/photo-1594824111080-e09ac7668cd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBkZXJtYXRvbG9naXN0fGVufDF8fHx8MTc1ODQ1NTMzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    },
-    {
-      name: "Довлотова Гульзар Сейитбековна",
-      specialty: "Врач-генетик",
-      experience: "15 лет опыта",
-      education: "РГМУ им. Н.И. Пирогова",
-      achievements: [""],
-      rating: 4.9,
-      image: "https://images.unsplash.com/photo-1594824111080-e09ac7668cd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBkZXJtYXRvbG9naXN0fGVufDF8fHx8MTc1ODQ1NTMzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
+      experience: "24 лет опыта",
+      education: "КГМА им. И.К. Ахунбаева",
+      achievements: [],
+      image: KurmanalievaImg
     },
     {
       name: "Волкова Татьяна Алексеевна",
+      specialty: "Врач УЗИ, акушер-гинеколог",
+      experience: "30 лет опыта",
+      education: "ВолгГМУ",
+      achievements: ["Врач высшей категории", "Сертификат FMF"],
+      image: VolkovaImg
+    },
+    {
+      name: "Абдуллаева Азиза Асраловна",
       specialty: "Врач УЗИ",
-      experience: "15 лет опыта",
-      education: "РГМУ им. Н.И. Пирогова",
+      experience: "9 лет опыта",
+      education: "КРСУ им. Б.Н. Ельцина",
+      achievements: [],
+      image: ""
+    },
+    {
+      name: "Дубовскова Светлана Константиновна",
+      specialty: "Врач УЗИ",
+      experience: "36 лет опыта",
+      education: "КГМА им. И.К. Ахунбаева",
+      achievements: [],
+      image: DubovskovaImg
+    },
+    {
+      name: "Подтёсова Елена Николаевна",
+      specialty: "Врач акушер-гинеколог, гинеколог-эндокринолог",
+      experience: "25 лет опыта",
+      education: "КГМА им. И.К. Ахунбаева",
       achievements: [""],
-      rating: 4.9,
-      image: "https://images.unsplash.com/photo-1594824111080-e09ac7668cd0?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxkb2N0b3IlMjBmZW1hbGUlMjBkZXJtYXRvbG9naXN0fGVufDF8fHx8MTc1ODQ1NTMzNHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral"
-    }
+      image: PodtesovaImg
+    },
+    {
+      name: "Нарматова Динара Балтабаевна",
+      specialty: "Врач акушер-гинеколог",
+      experience: "35 лет опыта",
+      education: "КГМИ областной роддом г. Ош",
+      achievements: [],
+      image: NarmatovaImg
+    },
+    {
+      name: "Мукаева Жанна Туратбековна",
+      specialty: "Врач гинеколог-эндокринолог",
+      experience: "7 лет опыта",
+      education: "КГМА им. И.К. Ахунбаева",
+      achievements: [],
+      image: ""
+    },
+    {
+      name: "Ким Лилия Олеговна",
+      specialty: "Врач гинеколог-эндокринолог",
+      experience: "25 лет опыта",
+      education: "КГМА им. И.К. Ахунбаева",
+      achievements: [],
+      image: KimImg
+    },
+    {
+      name: "Василевская Наталья Михайловна",
+      specialty: "Врач гинеколог-эндокринолог",
+      experience: "41 лет опыта",
+      education: "СГМИ им. В.И. Разумовского",
+      achievements: [],
+      image: VasilevskayaImg
+    },
   ];
 
   return (
@@ -163,10 +179,6 @@ export function DoctorsModal({ isOpen, onClose }: DoctorsModalProps) {
                     alt={doctor.name}
                     className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
                   />
-                  <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm rounded-lg px-2 py-1 flex items-center space-x-1">
-                    <Star className="w-3 h-3 text-yellow-400 fill-current" />
-                    <span className="text-sm font-semibold">{doctor.rating}</span>
-                  </div>
                 </div>
                 
                 <CardContent className="p-4">
@@ -182,6 +194,14 @@ export function DoctorsModal({ isOpen, onClose }: DoctorsModalProps) {
                           • {achievement}
                         </p>
                       ))}
+                    </div>
+                    <div className="flex items-center space-x-1 text-xs text-muted-foreground mb-1">
+                      <Clock className="w-4 h-4" />
+                      <span>{doctor.experience}</span>
+                    </div>
+                    <div className="flex items-center space-x-1 text-xs text-muted-foreground">
+                      <Award className="w-4 h-4" />
+                      <span>{doctor.education}</span>
                     </div>
                   </div>
                 </CardContent>

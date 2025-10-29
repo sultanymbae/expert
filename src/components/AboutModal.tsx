@@ -10,7 +10,7 @@ interface AboutModalProps {
 export function AboutModal({ isOpen, onClose }: AboutModalProps) {
   const stats = [
     { icon: Users, value: "15,000+", label: "Пациентов в год" },
-    { icon: Award, value: "50+", label: "Опытных врачей" },
+    { icon: Award, value: "40+", label: "Опытных врачей" },
     { icon: Clock, value: "15", label: "Лет на рынке" },
     { icon: Shield, value: "99.8%", label: "Безопасность процедур" },
   ];
@@ -82,8 +82,8 @@ export function AboutModal({ isOpen, onClose }: AboutModalProps) {
             <h4 className="font-semibold text-blue-900">Лицензии и аккредитация</h4>
           </div>
           <p className="text-sm text-blue-800">
-            Клиника имеет все необходимые лицензии Министерства здравоохранения РФ 
-            и международные сертификаты качества ISO 9001:2015
+            Клиника имеет все необходимые лицензии Министерства здравоохранения КР 
+            и международные сертификаты качества №3674
           </p>
         </div>
 
@@ -98,10 +98,10 @@ export function AboutModal({ isOpen, onClose }: AboutModalProps) {
               <span className="font-semibold ml-2">4.9/5</span>
             </div>
             <p className="text-sm text-muted-foreground italic">
-              "Профессиональная команда, современное оборудование и внимательное отношение. 
-              Рекомендую всем, кто ценит качественную медицинскую помощь."
+              "Наблюдаюсь в этой клинике не первый год. Всегда прекрасное отношение со стороны персонала. Девочки на ресепшене всегда вежливые, всегда терпеливые. Встречают с улыбкой. С удовольствием хожу сюда.
+              Желаю процветания и много пациентов вашей клинике. Вы самые лучшие."
             </p>
-            <p className="text-xs text-muted-foreground mt-2">— Анна М., пациент клиники</p>
+            <p className="text-xs text-muted-foreground mt-2">— Мисис К., пациент клиники</p>
           </div>
         </div>
       </div>

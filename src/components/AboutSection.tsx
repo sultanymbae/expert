@@ -1,13 +1,13 @@
 import { ImageWithFallback } from "./figma/ImageWithFallback";
 import { CheckCircle, Users, Award, Microscope } from "lucide-react";
-import clinicImage from 'figma:asset/e9f062c11346ca24bbc4faffb8a0bc1ed34678ad.png';
+import clinicImage from "../assets/clinicimage.png"
 
 export function AboutSection() {
   const features = [
     {
       icon: Users,
       title: "Опытные специалисты",
-      description: "Более 50 врачей с многолетним опытом работы"
+      description: "Более 40 врачей с многолетним опытом работы"
     },
     {
       icon: Microscope,
@@ -27,9 +27,9 @@ export function AboutSection() {
   ];
 
   const stats = [
-    { number: "15+", label: "лет работы" },
-    { number: "50+", label: "специалистов" },
-    { number: "10,000+", label: "пациентов" },
+    { number: "20+", label: "лет работы" },
+    { number: "40+", label: "специалистов" },
+    { number: "15,000+", label: "пациентов" },
     { number: "98%", label: "положительных отзывов" }
   ];
 
