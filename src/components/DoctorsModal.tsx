@@ -148,7 +148,7 @@ export function DoctorsModal({ isOpen, onClose }: DoctorsModalProps) {
     {
       name: "Василевская Наталья Михайловна",
       specialty: "Врач гинеколог-эндокринолог",
-      experience: "41 лет опыта",
+      experience: "41 год опыта",
       education: "СГМИ им. В.И. Разумовского",
       achievements: [],
       image: VasilevskayaImg

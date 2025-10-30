@@ -1901,7 +1901,7 @@
     .md\:w-12 {
       width: calc(var(--spacing) * 12);
     }
-  }
+  }  
 
   @media (width >= 48rem) {
     .md\:w-auto {
