@@ -111,6 +111,7 @@ export function ServicesSection() {
           <button 
             onClick={() => setIsServicesModalOpen(true)}
             className="bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+            style={{ cursor: 'pointer' }}
           >
             Все услуги и цены
           </button>

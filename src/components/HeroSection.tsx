@@ -107,6 +107,7 @@ export function HeroSection() {
                 size="lg" 
                 className="px-8"
                 onClick={handleAppointmentClick}
+                style={{ cursor: 'pointer' }}
               >
                 Записаться на приём
               </Button>
@@ -115,6 +116,7 @@ export function HeroSection() {
                 size="lg" 
                 className="px-8"
                 onClick={() => setIsAboutModalOpen(true)}
+                style={{ cursor: 'pointer' }}
               >
                 Узнать больше
               </Button>

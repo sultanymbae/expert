@@ -63,6 +63,7 @@ export function Header() {
               variant="outline" 
               className="hidden md:inline-flex"
               onClick={handleAppointmentClick}
+              style={{ cursor: 'pointer' }}
             >
               Записаться онлайн
             </Button>

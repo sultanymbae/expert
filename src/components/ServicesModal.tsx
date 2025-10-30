@@ -298,6 +298,7 @@ export function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
                   key={category.id} 
                   value={category.id}
                   className="flex flex-col items-center gap-1 p-3 text-xs whitespace-nowrap"
+                  style={{ cursor: 'pointer' }}
                 >
                   <category.icon className={`w-4 h-4 ${category.color}`} />
                   <span className="text-center leading-tight">{category.name}</span>
