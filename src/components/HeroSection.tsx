@@ -54,7 +54,7 @@ export function HeroSection() {
     ]
   };
   return (
-    <section className="bg-gradient-to-br from-blue-50 to-white py-20">
+    <section className="bg-gradient-to-br from-blue-50 to-white py-10 md:py-20">
       <div className="container mx-auto px-4">
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Left content */}

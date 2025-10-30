@@ -67,9 +67,6 @@ export function Header() {
             >
               Записаться онлайн
             </Button>
-            <Button className="md:hidden" variant="outline" size="icon">
-              <Menu className="w-4 h-4" />
-            </Button>
           </div>
         </div>
       </div>
