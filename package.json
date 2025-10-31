@@ -63,5 +63,9 @@
       "scripts": {
             "dev": "vite",
             "build": "ROLLUP_NATIVE=false vite build"
+      },
+
+      "engines": {
+      "node": "20.x"
       }
 }
