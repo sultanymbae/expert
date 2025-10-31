@@ -1,12 +1,43 @@
+import { useState, useEffect } from "react";
 import { Menu, Phone, Mail, MapPin } from "lucide-react";
 import { Button } from "./ui/button";
+import { MobileMenu } from "./MobileMenu";
 import logoImage from "figma:asset/068e6f95f3736a0a673cf0904bfb8fd6419f5979.png";
 
 export function Header() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const handleAppointmentClick = () => {
     // Редирект на внешний сайт записи
     window.open('https://taplink.cc/expert_clinica?fbclid=PAZXh0bgNhZW0CMTEAAafRvOfE7UNuUmka3XZ0iJLUqkcp8qyr2AlXbJLwy7saStshOBQhDWZ7rI6dmg_aem_z3VU1Mvni_pGfgq0VsvWFw', '_blank');
   };
+
+  const handleNavClick = (href: string) => {
+    setIsMobileMenuOpen(false);
+    // Небольшая задержка для плавного закрытия меню перед прокруткой
+    setTimeout(() => {
+      if (href === '#') {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      } else {
+        const element = document.querySelector(href);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }, 100);
+  };
+
+  // Блокируем прокрутку body когда меню открыто
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = '';
+    }
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMobileMenuOpen]);
   return (
     <header className="w-full bg-white shadow-sm md:fixed md:top-0 md:left-0 md:right-0 md:z-50">
       {/* Top contact bar */}
@@ -63,13 +94,30 @@ export function Header() {
               variant="outline" 
               className="hidden md:inline-flex"
               onClick={handleAppointmentClick}
-              style={{ cursor: 'pointer' }}
             >
               Записаться онлайн
+            </Button>
+            
+            {/* Бургер-меню для мобильных */}
+            <Button 
+              variant="ghost" 
+              size="icon" 
+              className="md:hidden"
+              onClick={() => setIsMobileMenuOpen(true)}
+            >
+              <Menu className="w-6 h-6" />
             </Button>
           </div>
         </div>
       </div>
+
+      {/* Мобильное меню */}
+      <MobileMenu
+        isOpen={isMobileMenuOpen}
+        onClose={() => setIsMobileMenuOpen(false)}
+        onAppointmentClick={handleAppointmentClick}
+        onNavClick={handleNavClick}
+      />
     </header>
   );
 }

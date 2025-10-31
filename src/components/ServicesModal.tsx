@@ -333,17 +333,6 @@ export function ServicesModal({ isOpen, onClose }: ServicesModalProps) {
           </Tabs>
         </div>
 
-        {/* Информация о ценах */}
-        <div className="bg-blue-50 p-4 rounded-lg">
-          <h4 className="font-semibold text-blue-900 mb-2">Информация о ценах</h4>
-          <ul className="text-sm text-blue-800 space-y-1">
-            <li>• Цены указаны без учета дополнительных исследований</li>
-            <li>• Возможна рассрочка платежа для дорогостоящих процедур</li>
-            <li>• Действуют скидки для постоянных пациентов</li>
-            <li>• Принимаем полисы ДМС ведущих страховых компаний</li>
-          </ul>
-        </div>
-
         <div className="text-center pt-4 border-t">
           <p className="text-sm text-muted-foreground mb-3">
             Не нашли нужную услугу? Свяжитесь с нами для получения консультации
