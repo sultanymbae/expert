@@ -2,3 +2,14 @@
     "buildCommand": "npm run build",
     "outputDirectory": "build"
 }
+
+{
+    "builds": [
+    {
+        "src": "vite.config.js",
+        "use": "@vercel/node"
+    }
+    ],
+    "framework": "vite",
+    "outputDirectory": "dist"
+}
