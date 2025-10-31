@@ -46,7 +46,9 @@ export function Header() {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-2">
               <Phone className="w-4 h-4" />
-              <span>+996 772-50-34-91</span>
+              <span>+996 (772) 503 491</span>
+              <span>+996 (706) 503 491</span>
+              <span>+996 (556) 503 491</span>
             </div>
             <div className="flex items-center space-x-2">
               <Mail className="w-4 h-4" />
@@ -86,7 +88,6 @@ export function Header() {
             <a href="#services" className="hover:text-primary transition-colors">Услуги</a>
             <a href="#doctors" className="hover:text-primary transition-colors">Врачи</a>
             <a href="#about" className="hover:text-primary transition-colors">О клинике</a>
-            <a href="#contact" className="hover:text-primary transition-colors">Контакты</a>
           </nav>
 
           <div className="flex items-center space-x-4">

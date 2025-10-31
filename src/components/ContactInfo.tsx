@@ -23,7 +23,11 @@ export function ContactInfo() {
               </div>
               <h3 className="font-semibold mb-2">Телефон</h3>
               <div className="space-y-1">
-                <div className="font-semibold">+996 772-50-34-91</div>
+                <div className="font-semibold flex flex-col">
+                  <span>+996 (772) 503 491</span>
+                  <span>+996 (706) 503 491</span>
+                  <span>+996 (556) 503 491</span>
+                  </div>
                 <div className="text-sm text-muted-foreground">Пн–Пт 8:00–18:00</div>
               </div>
             </CardContent>

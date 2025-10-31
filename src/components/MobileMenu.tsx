@@ -83,12 +83,6 @@ export function MobileMenu({ isOpen, onClose, onAppointmentClick, onNavClick }: 
           >
             О клинике
           </button>
-          <button
-            onClick={() => onNavClick('#contact')}
-            className="px-4 py-3 text-left hover:bg-gray-100 transition-colors"
-          >
-            Контакты
-          </button>
         </nav>
 
         <div className="border-t my-2" />
